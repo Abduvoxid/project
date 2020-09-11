@@ -1,0 +1,346 @@
+/************************* FONTS STYLE ***************/
+
+@font-face {
+  font-family: "OpenSans-Bold";
+  src: url("../fonts/OpenSans/OpenSans-Bold.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "OpenSans-Light";
+  src: url("../fonts/OpenSans/OpenSans-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "OpenSans-Regular";
+  src: url("../fonts/OpenSans/OpenSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "OpenSans-SemiBold";
+  src: url("../fonts/OpenSans/OpenSans-SemiBold.ttf") format("truetype");
+}
+
+.font-family-bold{
+  font-family: "OpenSans-Bold", sans-serif!important;
+}
+
+.font-family-regular{
+  font-family: "OpenSans-Regular", sans-serif!important;
+}
+
+.font-family-light{
+  font-family: "OpenSans-Light", sans-serif!important;
+}
+
+.font-family-semi-bold{
+  font-family: "OpenSans-SemiBold", sans-serif!important;
+}
+/******************** MIXINS STYLE ******************/
+@mixin mask($address){
+  mask-image: url($address);
+  -webkit-mask-image: url($address);
+}
+//@mixin opacity($color1,$color2){
+//  background-image: linear-gradient(45deg, $color1,$color2);
+//}
+
+/******************** COLOR STYLE ********************/
+
+$color-bg: #F1F1F1;
+$color-icon: #949494;
+$color-text-muted: #858585;
+$color-green: #00C953;
+$color-purple: #5A077D;
+$color-placeholder: #A6A6A6;
+$bg-card-green: #0ABD7E;
+$bg-card-pink:#F65B6D;
+$bg-card-orange:#F69064;
+$bg-card-blue:#01A7AA;
+$bg-card-green2:#0DEA9D;
+$bg-card-pink2:#F68A97;
+$bg-card-orange2:#F6B092;
+$bg-card-blue2:#01D2D6;
+
+
+
+
+/********************* ICON STYLE ********************/
+
+.icon{
+  width: 17px;
+  height: 17px;
+  display: inline-block;
+  mask-size: 100%;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-size: 100%;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  background-color: $color-icon;
+  &.icon-search{
+    @include mask("../icons/search.svg");
+  }
+  &.icon-heart{
+    @include mask("../icons/heart.svg");
+  }
+  &.icon-basket{
+    @include mask("../icons/shopping-cart.svg");
+  }
+  &.icon-view{
+    @include mask("../icons/eye.svg");
+  }
+  &.icon-download{
+    @include mask("../icons/download.svg");
+  }
+  &.icon-user{
+    @include mask("../icons/user.svg");
+  }
+  &.icon-avatar{
+    @include mask("../icons/avatar.svg");
+  }
+  &.icon-grid{
+    @include mask("../icons/grid.svg");
+  }
+  &.icon-video{
+    @include mask("../icons/video.svg");
+  }
+  &.icon-user{
+    @include mask("../icons/user.svg");
+  }
+  &.icon-users{
+    @include mask("../icons/users.svg");
+  }
+  &.icon-feather{
+    @include mask("../icons/feather.svg");
+  }
+  &.icon-voicemail{
+    @include mask("../icons/voicemail.svg");
+  }
+  &.icon-speaker{
+    @include mask("../icons/speaker.svg");
+  }
+  &.icon-columns{
+    @include mask("../icons/columns.svg");
+  }
+  &.icon-settings{
+    @include mask("../icons/settings.svg");
+  }
+  &.icon-bookmark{
+    @include mask("../icons/bookmark.svg");
+  }
+  &.icon-video2{
+    @include mask("../images/video.png");
+  }
+
+  &.icon-white{
+    background-color: #ffffff;
+  }
+  &.icon-green{
+    background-color: $color-green;
+  }
+  &.icon-purple{
+    background-color: $color-purple;
+  }
+  &.icon-black{
+    background-color: black;
+  }
+
+}
+/****************MAIN STYLES***************/
+body {
+  //max-height: max-content;
+  width: 100%;
+  max-width: max-content;
+  min-width: min-content;
+  overflow: hidden;
+  .size {
+    font-size: 13px;
+  }
+
+  nav {
+    box-shadow: 5px 0 10px lightgrey;
+
+    .navbar-brand {
+      h4 {
+        font-size: 14px;
+        margin-top: 8px;
+      }
+
+      p {
+        font-size: 13px;
+      }
+
+    }
+
+    .navbar-nav {
+      .nav-item {
+        .input-group {
+          width: 400px;
+          margin-left: 8rem;
+
+          input, .btn {
+            background-color: $color-bg;
+
+            &:focus {
+              box-shadow: none;
+            }
+          }
+
+          input::placeholder {
+            color: $color-placeholder;
+            font-size: 13px;
+          }
+        }
+
+        .dropdown {
+          button {
+            background-color: $color-bg;
+          }
+          .dropdown-menu {
+            min-width: 55px;
+            //max-height: max-content;
+            //max-width: max-content;
+            .dropdown-item {
+              //width: max-content !important;
+              padding: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    .asosiy-menu {
+      width: 250px;
+      background-color: $color-purple;
+      padding-bottom: 40px;
+
+      p {
+        font-size: 12px;
+      }
+
+      h6 {
+        font-weight: lighter;
+        font-size: 11px;
+      }
+
+      .avatar {
+        width: 45px;
+        height: 45px;
+        padding: {
+          top: 13px;
+          left: 14px;
+
+        }
+        span{
+          transform: scale(1.5);
+        }
+      }
+
+      .orange {
+        padding: 11px 20px;
+
+        &:hover {
+          border-left: 5px solid orange;
+        }
+      }
+    }
+
+    .dashboard {
+      width: 100%;
+      background-color: $color-bg;
+      .col-md-8{
+        .card{
+
+          img{
+            height: 100%;
+          }
+        }
+      }
+      .col-md-4{
+        .card{
+
+          img{
+            height: 100%;
+            margin-bottom: 3px;
+          }
+        }
+      }
+      h6 {
+        font-size: 13px;
+      }
+
+      .col-md-3 {
+
+
+        &:nth-child(2) {
+          .card {
+            background-image: linear-gradient(45deg,$bg-card-pink,$bg-card-pink2);
+          }
+
+        }
+        &:nth-child(1) {
+          .card {
+            background-image: linear-gradient(45deg,$bg-card-green,$bg-card-green2);
+          }
+
+        }
+        &:nth-child(4) {
+          .card {
+            background-image: linear-gradient(45deg,$bg-card-blue,$bg-card-blue2);
+            padding-bottom: 49px;
+          }
+
+        }
+        &:nth-child(3) {
+          .card {
+            background-image: linear-gradient(45deg,$bg-card-orange,$bg-card-orange2);
+            padding-bottom: 49px;
+          }
+
+
+        }
+        .card {
+          overflow: hidden;
+          border: none;
+          padding: 10px;
+          position: relative;
+          .back{
+            .icon.icon-white{
+              position: absolute;
+              right: 0;
+              transform: scale(7) translate(-5px, -4px) rotate(-30deg);
+              opacity: 0.3;
+            }
+
+
+          }
+          h5 {
+            font-size: 15px;
+          }
+
+          .line {
+            width: 100%;
+            height: 0;
+            border: 0.5px solid white;
+          }
+
+          .badge {
+            margin-bottom: 5px;
+            width: 60px;
+            padding: auto;
+            font-size: 9px;
+            text-align: center;
+            &:nth-child(1) {
+              color: #0ABD7E;
+            }
+
+          }
+        }
+      }
+    }
+  }
+
+}
+
